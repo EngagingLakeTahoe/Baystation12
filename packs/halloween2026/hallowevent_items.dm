@@ -69,68 +69,14 @@
 	anchored = TRUE
 
 // FOOD
-
-/obj/item/reagent_containers/food/snacks/dipchip
-	name = "a chip"
-	desc = "A simple tortilla chip."
-	icon = 'packs/halloween2026/icons.dmi'
-	icon_state = "dipchip"
-	var/datum/reagents/dipped_reagents
-	/// Descriptive string for currently loaded food object
-	var/loaded
-
-	var/loaded_icon = "loadedfood"
-
 /obj/item/reagent_containers/food/snacks/platter/dipchipbowl
 	name = "a bowl of chips"
 	desc = "A small bowl of tortilla chips."
 	icon = 'packs/halloween2026/icons.dmi'
 	icon_state = "dipchipbowl"
+	nutriment_desc = list("crunchy salty chips" = 1)
 	vendingobject = /obj/item/reagent_containers/food/snacks/dipchip
 	unitname = "tortilla chip"
-
-/obj/item/reagent_containers/food/snacks/dip
-	name = "sour cream and onion dip"
-	desc = "A creamy dip of sour cream and onion."
-	icon = 'packs/halloween2026/icons.dmi'
-	icon_state = "dip"
-
-/obj/item/reagent_containers/food/snacks/dip/use_tool(obj/item/W, mob/living/user, list/click_params)
-	if(!is_open_container())
-		to_chat(user, SPAN_WARNING("\The [src] isn't open!"))
-		return TRUE
-	// Eating with forks
-	if(istype(W,/obj/item/reagent_containers/food/snacks/dipchip))
-		var/obj/item/reagent_containers/food/snacks/dipchip/U = W
-		if(!U.dipped_reagents)
-			U.dipped_reagents = new/datum/reagents(5, GLOB.temp_reagents_holder)
-
-		if (U.dipped_reagents.total_volume > 0)
-			to_chat(user, SPAN_WARNING("You already have something on \the [U]."))
-			return TRUE
-
-		to_chat(user, SPAN_NOTICE("You scoop up some \the [src] with \the [U]!"))
-
-		bitecount++
-		U.ClearOverlays()
-		U.loaded = "[src]"
-		var/image/I = new('icons/obj/machines/kitchen.dmi', U.loaded_icon)
-		I.color = src.filling_color
-		U.AddOverlays(I)
-
-		if(!reagents)
-			crash_with("A snack [type] failed to have a reagent holder when attacked with a [W.type]. It was [QDELETED(src) ? "" : "not"] being deleted.")
-		else
-			reagents.trans_to_obj(U, min(reagents.total_volume,5))
-			if (reagents.total_volume <= 0)
-				if (loc && trash)
-					if (ispath(trash))
-						trash = new trash
-					trash.dropInto(loc)
-					trash = null
-				qdel(src)
-		return TRUE
-	return ..()
 
 /obj/item/reagent_containers/food/snacks/carmapop
 	name = "caramel apple lollipop"
@@ -200,7 +146,7 @@
 	w_class = ITEM_SIZE_TINY
 	bitesize = 2
 
-//obj/item/reagent_containers/food/snacks/dipchip
+/obj/item/reagent_containers/food/snacks/dipchip
 	name = "tortilla chip"
 	desc = "A small bowl of tortilla chips"
 	icon = 'packs/halloween2026/icons.dmi'
@@ -210,8 +156,13 @@
 	nutriment_desc = list("cruncy salty chip" = 1)
 	w_class = ITEM_SIZE_TINY
 	bitesize = 1
+	var/datum/reagents/dipped_reagents
+	/// Descriptive string for currently loaded food object
+	var/loaded
 
-//obj/item/reagent_containers/food/snacks/dip
+	var/loaded_icon = "loadedfood"
+
+/obj/item/reagent_containers/food/snacks/dip
 	name = "dip"
 	desc = "A bowl of savory dip for chips."
 	icon = 'packs/halloween2026/icons.dmi'
@@ -221,3 +172,41 @@
 	nutriment_desc = list("savory and creamy dip" = 1)
 	w_class = ITEM_SIZE_TINY
 	bitesize = 1
+
+/obj/item/reagent_containers/food/snacks/dip/use_tool(obj/item/W, mob/living/user, list/click_params)
+	if(!is_open_container())
+		to_chat(user, SPAN_WARNING("\The [src] isn't open!"))
+		return TRUE
+	// Eating with forks
+	if(istype(W,/obj/item/reagent_containers/food/snacks/dipchip))
+		var/obj/item/reagent_containers/food/snacks/dipchip/U = W
+		if(!U.dipped_reagents)
+			U.dipped_reagents = new/datum/reagents(5, GLOB.temp_reagents_holder)
+
+		if (U.dipped_reagents.total_volume > 0)
+			to_chat(user, SPAN_WARNING("You already have something on \the [U]."))
+			return TRUE
+
+		to_chat(user, SPAN_NOTICE("You scoop up some \the [src] with \the [U]!"))
+
+		bitecount++
+		U.ClearOverlays()
+		U.loaded = "[src]"
+		var/image/I = new('icons/obj/machines/kitchen.dmi', U.loaded_icon)
+		I.color = src.filling_color
+		U.AddOverlays(I)
+		U.nutriment_desc += list(src.nutriment_desc)
+
+		if(!reagents)
+			crash_with("A snack [type] failed to have a reagent holder when attacked with a [W.type]. It was [QDELETED(src) ? "" : "not"] being deleted.")
+		else
+			reagents.trans_to_obj(U, min(reagents.total_volume,5))
+			if (reagents.total_volume <= 0)
+				if (loc && trash)
+					if (ispath(trash))
+						trash = new trash
+					trash.dropInto(loc)
+					trash = null
+				qdel(src)
+		return TRUE
+	return ..()
