@@ -1,4 +1,4 @@
-#include "event_items.dm"
+#include "../event_spring2026/event_items.dm"
 #include "resort.dmm"
 
 /datum/map_template/ruin/resort
