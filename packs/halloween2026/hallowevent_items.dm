@@ -210,3 +210,11 @@
 				qdel(src)
 		return TRUE
 	return ..()
+
+// TREAT BAG
+/obj/item/storage/bag/plasticbag/treatbag
+	name = "treat bag"
+	desc = "A hard plastic bag with a smiling jack-o-lantern on the front."
+	icon = 'packs/halloween2026/icons.dmi'
+	icon_state = "treatbag"
+	item_state = "treatbag"
