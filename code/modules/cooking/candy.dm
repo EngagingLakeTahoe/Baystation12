@@ -11,7 +11,7 @@
 		"Jawbreaker" = /obj/item/reagent_containers/food/snacks/variable/jawbreaker,
 		"Candy Bar" = /obj/item/reagent_containers/food/snacks/variable/candybar,
 		"Sucker" = /obj/item/reagent_containers/food/snacks/variable/sucker,
-		"Jelly" = /obj/item/reagent_containers/food/snacks/variable/jelly
+		"Jelly" = /obj/item/reagent_containers/food/snacks/variable/jelly,
 		"Soft Candy" = /obj/item/reagent_containers/food/snacks/variable/softcandy
 	)
 

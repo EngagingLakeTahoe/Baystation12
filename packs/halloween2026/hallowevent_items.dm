@@ -160,7 +160,7 @@
 	/// Descriptive string for currently loaded food object
 	var/loaded
 
-	var/loaded_icon = "loadedfood"
+	var/loaded_icon = "chipdip"
 
 /obj/item/reagent_containers/food/snacks/dip
 	name = "dip"
@@ -192,7 +192,7 @@
 		bitecount++
 		U.ClearOverlays()
 		U.loaded = "[src]"
-		var/image/I = new('icons/obj/machines/kitchen.dmi', U.loaded_icon)
+		var/image/I = new(icon, U.loaded_icon)
 		I.color = src.filling_color
 		U.AddOverlays(I)
 		U.nutriment_desc += list(src.nutriment_desc)
@@ -216,5 +216,5 @@
 	name = "treat bag"
 	desc = "A hard plastic bag with a smiling jack-o-lantern on the front."
 	icon = 'packs/halloween2026/icons.dmi'
-	icon_state = "treatbag"
-	item_state = "treatbag"
+	icon_state = "treatbasket"
+	item_state = "treatbasket"
