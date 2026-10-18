@@ -18,9 +18,10 @@ jobs:
     if: github.repository == 'Baystation12/Baystation12' # to prevent this running on forks
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           fetch-depth: 0
+          persist-credentials: false
       - name: Get PR number
         id: pr
         run: |
@@ -30,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Python setup
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.x'
         if: ${{ steps.pr.outputs.pull_request_number != '' }}
@@ -61,8 +62,10 @@ jobs:
         run: |
           git config --global user.email "${{ secrets.BOT_EMAIL }}"
           git config --global user.name "${{ secrets.BOT_NAME }}"
+          git config --global --unset credential.helper || true # this might not be needed, but it's just in case
+          git config --unset-all http.https://github.com/.extraheader || true
           git diff --quiet --exit-code && echo "No changes found, abort." && exit 0
           git commit -m "Automatic changelog generation for PR #$PR_NUMBER [ci skip]" -a
-          git remote set-url origin https://${{secrets.BOT_NAME}}:${{secrets.BOT_TOKEN}}@github.com/${{github.repository}}
-          git push origin dev
+          git remote add changelog https://${{secrets.BOT_NAME}}:${{secrets.BOT_TOKEN}}@github.com/${{github.repository}}
+          git push changelog dev
         if: ${{ steps.cl_files.outputs.cl_files != '0' }}

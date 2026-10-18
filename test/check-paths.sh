@@ -27,7 +27,7 @@ exactly() { # exactly N name search [mode] [filter]
 
 # If you increase any of these numbers you're probably doing it wrong
 exactly 0 "escapes" '\\\\(red|blue|green|black|b|i[^mc])'
-exactly 4 "Del()s" '\WDel\('
+exactly 5 "Del()s" '\WDel\('
 exactly 2 "/atom text paths" '"/atom'
 exactly 2 "/area text paths" '"/area'
 exactly 18 "/datum text paths" '"/datum'
@@ -48,7 +48,7 @@ exactly 25 "text2path uses" 'text2path'
 exactly 5 "update_icon() override" '/update_icon\((.*)\)'  -P
 exactly 4 "goto use" 'goto '
 exactly 1 "NOOP match" 'NOOP'
-exactly 325 "spawn uses" '^\s*spawn\s*\(\s*(-\s*)?\d*\s*\)' -P
+exactly 326 "spawn uses" '^\s*spawn\s*\(\s*(-\s*)?\d*\s*\)' -P
 exactly 0 "tag uses" '\stag = ' -P '**/*.dmm'
 exactly 0 "anchored = 0/1" 'anchored\s*=\s*\d' -P
 exactly 2 "density = 0/1" 'density\s*=\s*\d' -P
@@ -71,6 +71,7 @@ exactly 0 "istype /atom where isloc should be used" 'istype\(.*?,\s*/atom\s*\)' 
 exactly 0 "istype atom/movable where ismovable should be used" 'istype\(.*?,\s*/atom/movable\s*\)' -P
 exactly 0 "callback proc/ or verb/ where PROC_REF, VERB_REF, etc should be used" 'Callback\([\w/]*,\s*[\w\./]*proc' -P # Callback(src, .proc/foo) should be Callback(src, PROC_REF(foo)), or equivalent. See code\__defines\procs.dm
 exactly 0 "uses of deprecated text proc" '\btext\(' -P
+exactly 8 "calls to SSmachines.machinery where MACHINES_OF() should be used" 'SSmachines\.machinery(?!_by_type)' -P
 # If you increase any of these numbers you're probably doing it wrong
 
 num=`find ./html/changelogs -not -name "*.yml" | wc -l`

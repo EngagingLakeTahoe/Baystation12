@@ -3,10 +3,6 @@
 #define THROTTLE_MAX_BURST 15 SECONDS
 #define SET_THROTTLE(TIME, REASON) throttle[1] = base_throttle + (TIME); throttle[2] = (REASON);
 
-
-
-var/global/game_id = randhex(8)
-
 GLOBAL_VAR(href_logfile)
 
 
@@ -79,7 +75,6 @@ GLOBAL_VAR(href_logfile)
 		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
 
-	SetupLogs()
 	var/date_string = time2text(world.realtime, "YYYY/MM/DD")
 	to_file(global.diary, "[log_end]\n[log_end]\nStarting up. (ID: [game_id]) [time2text(world.timeofday, "hh:mm.ss")][log_end]\n---------------------[log_end]")
 
@@ -87,7 +82,7 @@ GLOBAL_VAR(href_logfile)
 		if (config.server_name)
 			name = "[config.server_name]"
 		if (config.log_runtime)
-			var/runtime_log = file("data/logs/runtime/[date_string]_[time2text(world.timeofday, "hh:mm")]_[game_id].log")
+			var/runtime_log = file("[GLOB.log_directory]/runtime-[game_id].log")
 			to_file(runtime_log, "Game [game_id] starting up at [time2text(world.timeofday, "hh:mm.ss")]")
 			log = runtime_log
 		if (config.log_hrefs)
@@ -119,7 +114,7 @@ GLOBAL_VAR_AS(world_topic_last, world.timeofday)
 
 
 /world/Topic(T, addr, master, key)
-	to_file(global.diary, "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]")
+	game_log_realtime("TOPIC", "\"[T]\" from:[addr], master:[master], key:[key]")
 
 	if (GLOB.world_topic_last > world.timeofday)
 		GLOB.world_topic_throttle = list() //probably passed midnight
@@ -487,14 +482,6 @@ GLOBAL_VAR_AS(world_topic_last, world.timeofday)
 	if (!config?.hub_visible || !config.hub_entry)
 		return
 	status = config.generate_hub_entry()
-
-
-/world/proc/SetupLogs()
-	GLOB.log_directory = "data/logs/[time2text(world.realtime, "YYYY/MM/DD")]/round-"
-	if(game_id)
-		GLOB.log_directory += "[game_id]"
-	else
-		GLOB.log_directory += "[replacetext(time_stamp(), ":", ".")]"
 
 
 var/global/failed_db_connections = 0

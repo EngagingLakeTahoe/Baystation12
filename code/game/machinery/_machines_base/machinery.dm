@@ -14,7 +14,7 @@
 	throw_speed = 1
 	throw_range = 5
 
-	health_resistances = DAMAGE_RESIST_ELECTRICAL
+	health_resistances = /singleton/resistance/electrical
 	health_flags = HEALTH_FLAG_STRUCTURE
 
 	/// Boolean. Whether or not the machine has been emagged.
@@ -79,7 +79,7 @@
 		set_dir(d)
 	if (init_flags & INIT_MACHINERY_START_PROCESSING)
 		START_PROCESSING_MACHINE(src, INIT_MACHINERY_START_PROCESSING)
-	SSmachines.machinery += src // All machines should remain in this list, always.
+	SSmachines.AddMachinery(src)
 	if(ispath(wires))
 		wires = new wires(src)
 	populate_parts(populate_parts)
@@ -100,7 +100,7 @@
 /obj/machinery/Destroy()
 	if(istype(wires))
 		QDEL_NULL(wires)
-	SSmachines.machinery -= src
+	SSmachines.RemoveMachinery(src)
 	QDEL_NULL_LIST(component_parts) // Further handling is done via destroyed events.
 	STOP_PROCESSING_MACHINE(src, MACHINERY_PROCESS_ALL)
 	. = ..()

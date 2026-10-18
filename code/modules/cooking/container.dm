@@ -14,7 +14,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER | ATOM_FLAG_NO_REACT
-	matter = list(MATERIAL_ALUMINIUM = 3000)
+	matter = list(MATERIAL_ALUMINIUM = 300)
 	var/list/insertable = list(
 		/obj/item/reagent_containers/food/snacks,
 		/obj/item/holder,
@@ -99,7 +99,7 @@
 	return TRUE
 
 /obj/item/reagent_containers/cooking_container/use_before(atom/target, mob/living/user, click_parameters)
-	var/intent_check = ishuman(user) ? I_GRAB : I_HELP
+	var/intent_check = ishuman(user) ? I_GRAB : I_HURT
 	if (user.a_intent != intent_check || istype(target, /obj/item/storage) || istype(target, /obj/screen/item_relayed/storage))
 		return ..()
 
@@ -463,7 +463,15 @@
 	var/singleton/cooking_recipe/recipe = select_recipe(src, appliance = appliancetype)
 
 	if(!recipe && length(contents))
-		var/obj/item/reagent_containers/food/snacks/source = contents[1]
+		for(var/obj/item/component in contents)
+			if(istype(component, /obj/item/reagent_containers/food/snacks))
+				continue
+			to_chat(usr, SPAN_WARNING("\The [component] will not combine into a meal on its own - \the [src] does not hold a complete recipe."))
+			return
+		var/obj/item/reagent_containers/food/snacks/source = locate(/obj/item/reagent_containers/food/snacks) in contents
+		if(!source)
+			to_chat(usr, SPAN_WARNING("There is nothing on \the [src] you could make a meal out of."))
+			return
 		var/obj/item/reagent_containers/food/snacks/variable/result = new (get_turf(src))
 		if (source.reagents?.total_volume)
 			source.reagents.trans_to(result, source.reagents.total_volume)
@@ -517,13 +525,17 @@
 	do_empty(usr, get_turf(src))
 	update_icon()
 
+/obj/item/reagent_containers/cooking_container/board/cheese
+  name = "cheesecloth"
+  appliancetype = COOKING_APPLIANCE_CHEESE
+  icon_state = "cheesecloth"
+
 /obj/item/reagent_containers/cooking_container/board/bowl
 	name = "mixing bowl"
 	desc = "A large mixing bowl."
 	desc = "A bowl. You bowl foods... wait, what?"
 	icon_state = "mixingbowl"
 	center_of_mass = "x=17;y=7"
-	matter = list(MATERIAL_STEEL = 300)
 	volume = 180
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = "5;10;15;25;30;60;180"
