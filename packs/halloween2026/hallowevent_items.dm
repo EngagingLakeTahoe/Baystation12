@@ -3,7 +3,7 @@
 /obj/structure/hallowlights
 	name = "halloween lights"
 	icon = 'packs/halloween2026/icons.dmi'
-	icon_state = "stringlights_on"
+	icon_state = "hallowlights"
 	anchored = TRUE
 
 /obj/structure/string_light/Initialize()
@@ -68,6 +68,20 @@
 	icon_state = "cuteghost"
 	anchored = TRUE
 
+/turf/simulated/floor/darkcobble
+	name = "dark cobblestone floor"
+	icon = 'packs/halloween2026/icons.dmi'
+	icon_state = "darkcobblestone"
+
+/turf/simulated/floor/wornwood
+	name = "worn wooden floor"
+	icon = 'packs/halloween2026/icons.dmi'
+	icon_state = "wornwood"
+
+/turf/simulated/wall/hedge
+	icon = 'packs/halloween2026/icons.dmi'
+	icon_state = "hedge"
+
 // FOOD
 /obj/item/reagent_containers/food/snacks/platter/dipchipbowl
 	name = "a bowl of chips"
@@ -125,7 +139,7 @@
 		/obj/item/reagent_containers/food/snacks/cheesewedge
 	)
 	required_reagents = list(
-		/datum/reagent/drink/milk/cream = 3
+		/datum/reagent/drink/milk/cream = 5
 	)
 	required_produce = list(
 		"onion" = 1,
@@ -152,7 +166,7 @@
 	icon = 'packs/halloween2026/icons.dmi'
 	icon_state = "dipchip"
 	center_of_mass = "x=17;y=18"
-	nutriment_amt = 2
+	nutriment_amt = 1
 	nutriment_desc = list("cruncy salty chip" = 1)
 	w_class = ITEM_SIZE_TINY
 	bitesize = 1
@@ -168,7 +182,7 @@
 	icon = 'packs/halloween2026/icons.dmi'
 	icon_state = "dip"
 	center_of_mass = "x=17;y=18"
-	nutriment_amt = 2
+	nutriment_amt = 1
 	nutriment_desc = list("savory and creamy dip" = 1)
 	w_class = ITEM_SIZE_TINY
 	bitesize = 1
