@@ -5,10 +5,13 @@
 	icon = 'packs/halloween2026/icons.dmi'
 	icon_state = "hallowlights"
 	anchored = TRUE
+	light_color = "#e58775"
+	light_range = 2
+	light_power = 3
 
 /obj/structure/string_light/Initialize()
 	. = ..()
-	set_light(3, 1, "#ffc58f")
+	set_light(7, 7, "#e09d37")
 
 /obj/structure/cauldron/left
 	name = "large cauldron"
@@ -78,9 +81,11 @@
 	icon = 'packs/halloween2026/icons.dmi'
 	icon_state = "wornwood"
 
-/turf/simulated/wall/hedge
-	icon = 'packs/halloween2026/icons.dmi'
-	icon_state = "hedge"
+/obj/structure/girder/hedge
+    name = "hedge"
+    icon = 'packs/halloween2026/icons.dmi'
+    icon_state = "hedge"
+    opacity = TRUE
 
 // FOOD
 /obj/item/reagent_containers/food/snacks/platter/dipchipbowl

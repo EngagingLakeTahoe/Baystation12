@@ -10,12 +10,15 @@
 
 // Area shenanigans
 
+	apc_test_exempt_areas = list(
+		/area/beach = NO_SCRUBBER|NO_VENT,
+	)
 
 /area/spookyhouse
 	name = "spooky house"
 	icon_state = "spookyhouse"
 	requires_power = FALSE
 	lighting_tone = AREA_LIGHTING_WARM
-	var/new_brightness = 2
 	forced_ambience = list('sound/ambience/maintambience.ogg')
 	req_access = FALSE
+	dynamic_lighting = 1

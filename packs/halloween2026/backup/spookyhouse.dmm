@@ -1,4 +1,4 @@
-"aa" = (/turf/simulated/wall/growth,/area/spookyhouse)
+"aa" = (/turf/simulated/wall/hedge,/area/spookyhouse)
 "ab" = (/turf/simulated/floor/grass,/area/spookyhouse)
 "ac" = (/obj/structure/flora/tree/dead,/turf/simulated/floor/grass,/area/spookyhouse)
 "ad" = (/obj/structure/flora/ausbushes/sparsegrass,/turf/simulated/floor/grass,/area/spookyhouse)
@@ -8,7 +8,7 @@
 "ah" = (/obj/machinery/light/small{dir = 1},/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "ai" = (/obj/structure/cornerdecoweb{icon_state = "bigweb"},/turf/simulated/wall/walnut,/area/spookyhouse)
 "aj" = (/obj/structure/window/reinforced/full,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
-"ak" = (/obj/structure/hallowlights{icon_state = "hallowlights"},/turf/simulated/wall/walnut,/area/spookyhouse)
+"ak" = (/obj/structure/hallowlights,/turf/simulated/wall/walnut,/area/spookyhouse)
 "al" = (/obj/structure/decospider,/turf/simulated/wall/walnut,/area/spookyhouse)
 "am" = (/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "an" = (/obj/structure/cornerdecoweb,/obj/structure/closet/coffin/wooden,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
@@ -17,7 +17,7 @@
 "aq" = (/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "ar" = (/obj/machinery/vending/boozeomat,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "as" = (/obj/structure/table/woodentable/ebony,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
-"at" = (/mob/living/simple_animal/hostile/skeleton,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
+"at" = (/obj/structure/skele_stand/maint,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "au" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "av" = (/obj/structure/closet/medical_wall/filled,/turf/simulated/wall/walnut,/area/spookyhouse)
 "aw" = (/obj/structure/table/woodentable/ebony,/obj/item/flame/candle/scented,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
@@ -26,7 +26,7 @@
 "az" = (/obj/structure/table/woodentable/ebony,/obj/item/clothing/mask/luchador/tecnicos,/obj/item/clothing/mask/luchador/rudos,/obj/item/clothing/head/wizard/fake,/obj/item/clothing/head/collectable/xenom,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "aA" = (/obj/structure/undies_wardrobe,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "aB" = (/obj/structure/table/woodentable/ebony,/obj/item/clothing/shoes/foamclog/flipflobster,/obj/item/clothing/under/carp,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
-"aC" = (/obj/structure/closet/statue,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
+"aC" = (/obj/structure/skele_stand/maint,/turf/simulated/floor/grass,/area/spookyhouse)
 "aD" = (/obj/structure/table/woodentable/ebony,/obj/item/device/flashlight/lantern,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "aE" = (/obj/structure/table/woodentable/ebony,/obj/item/clothing/mask/horsehead,/obj/item/clothing/head/witchwig,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "aF" = (/obj/structure/table/woodentable/ebony,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
@@ -51,7 +51,7 @@
 "aY" = (/obj/structure/decoghost,/obj/structure/cornerdecoweb,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "aZ" = (/obj/structure/flora/pottedplant/overgrown,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "ba" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 1},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
-"bb" = (/obj/structure/bed/psych{name = "chaise lounge"},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
+"bb" = (/obj/machinery/reagentgrinder/juicer,/obj/structure/table/woodentable/ebony,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "bc" = (/obj/machinery/appliance/cooker/stove,/turf/simulated/floor/lino,/area/spookyhouse)
 "bd" = (/obj/machinery/appliance/cooker/grill,/turf/simulated/floor/lino,/area/spookyhouse)
 "be" = (/obj/machinery/appliance/cooker/fryer,/turf/simulated/floor/lino,/area/spookyhouse)
@@ -74,7 +74,7 @@
 "bv" = (/turf/simulated/floor/carpet/black,/area/spookyhouse)
 "bw" = (/obj/structure/table/woodentable/ebony,/obj/structure/cornerdecoweb{icon_state = "pumpkinlolli"},/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "bx" = (/obj/structure/table/woodentable/ebony,/obj/item/reagent_containers/food/snacks/variable/candybar,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
-"by" = (/obj/machinery/appliance/cooker/stove,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
+"by" = (/obj/structure/table/woodentable/ebony,/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "bz" = (/obj/structure/closet/fridge/meat,/turf/simulated/floor/lino,/area/spookyhouse)
 "bA" = (/obj/structure/bed/chair/wood/wings/ebony{icon_state = "wooden_chair_wings_preview"; dir = 1},/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "bB" = (/obj/structure/table/marble,/obj/item/reagent_containers/cooking_container/board,/obj/item/reagent_containers/cooking_container/board/bowl,/turf/simulated/floor/lino,/area/spookyhouse)
@@ -95,8 +95,8 @@
 "bQ" = (/obj/machinery/light/small/red,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "bR" = (/obj/machinery/door/unpowered/simple/wood{name = "kitchen"},/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "bS" = (/obj/machinery/door/unpowered/simple/wood{name = "kitchen"},/turf/simulated/floor/lino,/area/spookyhouse)
-"bT" = (/mob/living/simple_animal/hostile/skeleton,/turf/simulated/floor/grass,/area/spookyhouse)
-"bU" = (/obj/structure/decoghost,/turf/simulated/floor/wood/walnut,/area/spookyhouse)
+"bT" = (/obj/structure/skele_stand/maint,/turf/simulated/floor/wornwood,/area/spookyhouse)
+"bU" = (/obj/structure/table/woodentable/ebony,/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "bV" = (/obj/structure/cornerdecoweb,/turf/simulated/floor/beach/water{icon_state = "seashallow"},/area/spookyhouse)
 "bW" = (/turf/simulated/floor/beach/water{icon_state = "seashallow"},/area/spookyhouse)
 "bX" = (/obj/structure/curtain/black,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
@@ -104,22 +104,22 @@
 "bZ" = (/obj/structure/cornerdecoweb{icon_state = "bigweb"},/obj/structure/window/reinforced/full,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "ca" = (/obj/structure/coatrack,/obj/structure/cornerdecoweb,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "cb" = (/obj/structure/cornerdecoweb,/turf/simulated/floor/grass,/area/spookyhouse)
-"cc" = (/obj/structure/cornerdecoweb,/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
-"cd" = (/obj/structure/curtain/black,/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
-"ce" = (/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
-"cf" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"cc" = (/obj/structure/cornerdecoweb,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"cd" = (/obj/structure/curtain/black,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"ce" = (/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"cf" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "cg" = (/obj/structure/closet/coffin/wooden,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
-"ch" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"ch" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "ci" = (/obj/structure/decoghost,/turf/simulated/floor/wornwood,/area/spookyhouse)
 "cj" = (/obj/floor_decal/spline/fancy/wood,/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "ck" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/wornwood,/area/spookyhouse)
 "cl" = (/obj/structure/fake_stairs{icon_state = "woodstairup"; dir = 1},/turf/simulated/floor/tiled/stone/cobble,/area/spookyhouse)
 "cm" = (/obj/structure/tiki_torch,/turf/simulated/floor/wornwood,/area/spookyhouse)
 "cn" = (/obj/structure/bed/chair/wood/ebony,/turf/simulated/floor/wornwood,/area/spookyhouse)
-"co" = (/obj/structure/table/woodentable/ebony,/obj/structure/cornerdecoweb{icon_state = "treatbasket"},/obj/structure/cornerdecoweb{icon_state = "treatbasket"},/obj/structure/cornerdecoweb{icon_state = "treatbasket"},/obj/structure/cornerdecoweb{icon_state = "treatbasket"},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
+"co" = (/obj/machinery/light/alien,/turf/simulated/floor/tiled/old_tile{icon_state = "steel_dirty"},/area/spookyhouse)
 "cp" = (/obj/structure/bed/chair/armchair/beige,/turf/simulated/floor/carpet/black,/area/spookyhouse)
-"cq" = (/obj/structure/table/woodentable/ebony,/obj/structure/cornerdecoweb{icon_state = "treatbasket"},/obj/structure/cornerdecoweb{icon_state = "treatbasket"},/obj/structure/cornerdecoweb{icon_state = "treatbasket"},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
-"cr" = (/obj/structure/cornerdecoweb{icon_state = "spiderdeco"},/turf/simulated/wall/growth,/area/spookyhouse)
+"cq" = (/obj/structure/table/marble,/obj/machinery/reagentgrinder/juicer,/turf/simulated/floor/lino,/area/spookyhouse)
+"cr" = (/obj/structure/table/woodentable/ebony,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/turf/simulated/floor/carpet/orange,/area/spookyhouse)
 "cs" = (/obj/structure/fake_stairs{icon_state = "woodstairup"; dir = 1},/turf/simulated/floor/wornwood,/area/spookyhouse)
 "ct" = (/obj/structure/railing/mapped/wood{dir = 4},/obj/structure/bed/chair/wood/ebony,/turf/simulated/floor/wornwood,/area/spookyhouse)
 "cu" = (/obj/structure/flora/pottedplant/stoutbush,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
@@ -141,7 +141,7 @@
 "cK" = (/obj/structure/bed/chair/wood/wings/ebony,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "cL" = (/obj/structure/table/woodentable/ebony,/obj/structure/cornerdecoweb{icon_state = "bigweb"},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "cM" = (/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
-"cN" = (/obj/structure/hallowlights{icon_state = "hallowlights"; pixel_y = 10},/turf/simulated/floor/grass,/area/spookyhouse)
+"cN" = (/obj/structure/table/woodentable/ebony,/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/lino,/area/spookyhouse)
 "cO" = (/obj/structure/bed/chair/wood/wings/ebony{icon_state = "wooden_chair_wings_preview"; dir = 4},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "cP" = (/obj/structure/tombstone3,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "cQ" = (/obj/structure/flora/ausbushes/fernybush,/turf/simulated/floor/grass,/area/spookyhouse)
@@ -149,9 +149,9 @@
 "cS" = (/obj/structure/table/woodentable/ebony,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "cT" = (/obj/machinery/door/unpowered/simple/wood,/turf/simulated/floor/exoplanet/concrete,/area/spookyhouse)
 "cU" = (/obj/structure/bed/chair/armchair/beige,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
-"cV" = (/obj/structure/closet/statue,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
+"cV" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/exoplanet/barren,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"},/area/spookyhouse)
 "cW" = (/obj/structure/bed/chair/armchair/beige{icon_state = "armchair_preview"; dir = 1},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
-"cX" = (/obj/structure/decoghost,/obj/structure/cornerdecoweb,/turf/simulated/floor/wood/walnut,/area/spookyhouse)
+"cX" = (/obj/machinery/light/alien,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "cY" = (/obj/structure/tombstone2,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "cZ" = (/obj/structure/flora/tree/dead,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "da" = (/obj/structure/tombstone1,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
@@ -163,12 +163,12 @@
 "dg" = (/obj/item/clothing/head/witchwig,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "dh" = (/obj/structure/table/woodentable/ebony,/obj/item/flame/candle/scented,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
 "di" = (/obj/structure/bed/chair/wood/wings/ebony{icon_state = "wooden_chair_wings_preview"; dir = 1},/turf/simulated/floor/wood/ebony,/area/spookyhouse)
-"dj" = (/obj/machinery/light/small/red,/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"dj" = (/obj/machinery/light/small/red,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "dk" = (/obj/structure/cauldron/left,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "dl" = (/obj/structure/cauldron/right,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
-"dm" = (/obj/structure/cornerdecoweb{icon_state = "bigweb"},/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"dm" = (/obj/structure/cornerdecoweb{icon_state = "bigweb"},/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "dn" = (/obj/structure/tombstone1,/obj/structure/cornerdecoweb,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
-"do" = (/mob/living/simple_animal/hostile/skeleton,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_dug"},/area/spookyhouse)
+"do" = (/turf/simulated/floor/exoplanet/barren,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"},/area/spookyhouse)
 "dp" = (/turf/simulated/floor/tiled/stone/cobble,/area/spookyhouse)
 "dq" = (/obj/structure/flora/tree/dead{icon_state = "tree_stump"},/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "dr" = (/turf/simulated/floor/grass,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"},/area/spookyhouse)
@@ -182,29 +182,40 @@
 "dz" = (/obj/structure/flora/pottedplant/stoutbush,/turf/simulated/floor/grass,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"; dir = 4},/area/spookyhouse)
 "dA" = (/obj/structure/tombstone1,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_dug"},/area/spookyhouse)
 "dB" = (/turf/simulated/floor/grass,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"; dir = 8},/area/spookyhouse)
-"dC" = (/turf/simulated/floor/tiled/stone/cobble,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"; dir = 1},/area/spookyhouse)
 "dD" = (/obj/structure/closet/coffin/wooden,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "dE" = (/turf/simulated/floor/exoplanet/concrete,/area/spookyhouse)
 "dF" = (/obj/structure/decoghost,/turf/simulated/floor/exoplanet/concrete,/area/spookyhouse)
-"dG" = (/obj/structure/decoghost,/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"dG" = (/obj/structure/decoghost,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "dH" = (/turf/simulated/floor/grass,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"; dir = 1},/area/spookyhouse)
-"dI" = (/mob/living/simple_animal/hostile/skeleton,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
+"dI" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/obj/structure/skele_stand/maint,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "dJ" = (/obj/structure/tombstone2,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 "dK" = (/obj/structure/flora/tree/dead,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_dug"},/area/spookyhouse)
-"dL" = (/obj/structure/cornerdecoweb{icon_state = "bigweb"},/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 4},/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
-"dM" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 4},/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
-"dN" = (/obj/structure/curtain/black,/turf/simulated/floor/tiled/stone/cobble,/area/spookyhouse)
-"dO" = (/mob/living/simple_animal/hostile/skeleton,/obj/structure/cornerdecoweb,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
-"dP" = (/mob/living/simple_animal/hostile/skeleton,/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"dL" = (/obj/structure/cornerdecoweb{icon_state = "bigweb"},/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 4},/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"dM" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 4},/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"dO" = (/obj/structure/skele_stand/maint,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_dug"},/area/spookyhouse)
+"dP" = (/turf/simulated/floor/exoplanet/barren,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"; dir = 1},/area/spookyhouse)
 "dQ" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/exoplanet/concrete,/area/spookyhouse)
-"dR" = (/mob/living/simple_animal/hostile/skeleton,/turf/simulated/floor/exoplanet/concrete,/area/spookyhouse)
-"dS" = (/obj/structure/closet/coffin/wooden,/turf/simulated/floor/tiled/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"dR" = (/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"},/area/spookyhouse)
+"dS" = (/obj/structure/closet/coffin/wooden,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "dT" = (/obj/structure/cornerdecoweb{icon_state = "bigweb"},/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
-"dU" = (/mob/living/simple_animal/hostile/skeleton,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
-"dV" = (/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/obj/structure/closet/statue,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
+"dU" = (/obj/structure/skele_stand/maint,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
+"dV" = (/obj/structure/cornerdecoweb,/obj/machinery/light/small/red{icon_state = "bulb_map"; dir = 8},/obj/structure/skele_stand/maint,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "dW" = (/obj/structure/railing/mapped/wood,/obj/structure/tiki_torch,/turf/simulated/floor/wornwood,/area/spookyhouse)
-"dX" = (/mob/living/simple_animal/hostile/skeleton,/turf/simulated/floor/wornwood,/area/spookyhouse)
+"dX" = (/obj/structure/skele_stand/maint,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
 "dY" = (/obj/structure/railing/mapped/wood,/obj/structure/railing/mapped/wood{dir = 4},/obj/structure/tiki_torch,/turf/simulated/floor/wornwood,/area/spookyhouse)
+"dZ" = (/obj/structure/skele_stand/maint,/turf/simulated/floor/exoplanet/concrete,/area/spookyhouse)
+"ea" = (/obj/structure/fountain/strange,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"eb" = (/obj/structure/hallowlights,/turf/simulated/wall/hedge,/area/spookyhouse)
+"ec" = (/obj/structure/table/woodentable/ebony,/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
+"ed" = (/obj/structure/table/woodentable/ebony,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/obj/item/storage/bag/plasticbag/treatbag,/turf/simulated/floor/wood/ebony,/area/spookyhouse)
+"ee" = (/obj/structure/cornerdecoweb{icon_state = "spiderdeco"},/turf/simulated/wall/hedge,/area/spookyhouse)
+"ef" = (/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/wornwood,/area/spookyhouse)
+"eg" = (/obj/structure/cornerdecoweb,/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/wood/walnut,/area/spookyhouse)
+"eh" = (/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/wood/walnut,/area/spookyhouse)
+"ei" = (/obj/machinery/light/alien{icon_state = "bulb_map"; dir = 1},/turf/simulated/floor/exoplanet/barren,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"},/area/spookyhouse)
+"ej" = (/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/darkcobble{icon_state = "darkcobble"},/area/spookyhouse)
+"ek" = (/obj/machinery/light/alien,/turf/simulated/floor/exoplanet/barren,/turf/simulated/floor/exoplanet/barren{icon_state = "asteroid_edges"; dir = 1},/area/spookyhouse)
+"el" = (/obj/item/clothing/head/pumpkinhead,/turf/simulated/floor/exoplanet/barren,/area/spookyhouse)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -215,46 +226,46 @@ aaababababababababababababababababababababababababababaaabababababababababababab
 aaabaeabababababababababababadababababadababacabadababafafafafafafafafafafafafafafafafafafafafababaa
 aaababababababababababacabababababababababababababaeabafagahafagahaiagahafafagahafagahafagahafababaa
 aaababababababababafajajakakakakalakakakakajajafabababafamamafamamafamamafafamamafamamafamamafababaa
-aaabababacabadababafanaoapaqaqaqaraqasapapaoatafadababafafauafafauavafauafafafauafavauafafauafafabaa
+aaabababacabadababafanaoapaqaqasarbbbyapapaoapafadababafafauafafauavafauafafafauafavauafafauafafabaa
 aaababababababababafapapapawaxaqaqaqayapapapapafabababafazamahamamamahamaAafaAamahamamamahamaBafabaa
-aaabababababababadajapapaCaDasasasasasaCapapapajabababafaEamaFaGaGaGaFamaHafaHamaFaGaGaGaFamaIafabaa
-aaababadabababababajapapapaJaJaJaJaJaJapapapapajacababafaKamaLaFaFaFaFamaMafaMamaLaFaFaFaFamaNafabaa
-aaabababababaeababafaOapapapapapapapapapapapapafababadafaPamamamamamamamaQafamamamamamamamamaRafabaa
-aaabacababababababaiapapaSaSapapapapapaSaSapaTafafakakakakakakalafafafaUafafaUafafafaiafafafafafabaa
-aaababaeababadababafaVapawasapaWasaXapaDasapapafaYapaZapbaapbbapatbaapapapapapafbcbdbebfafabacabadaa
+aaabababababababadajapapataDasasasasasatapapapajabababafaEamaFaGaGaGaFamaHafaHamaFaGaGaGaFamaIafabaa
+aaababadabababababajapapapaJaJaJaJaJaJapapapapajacababafaKamaLaFaFaFbUamaMafaMamaLbUaFaFaFamaNafabaa
+aaabababababaeababafaOapapapapapapapapapapapapafababadafaPamamcoamamamamaQafamamamcoamamamamaRafabaa
+aaabacababababababaiapapaSaSapapapapapaSaSapaTafafakakakakakakalakakakaUakakaUafafafaiafafafafafabaa
+aaababaeababadababafaVapawasapaWasaXapaDasapapafaYapaZapbaapapapatbaapapapapapafbcbdbebfafabacabadaa
 aaababababababababajapapasaDapaWawaXapasawapaVafapapapapapapapapapapapapapapapbgbhbhbhbhajababababaa
 aaababababababacabajaOapbibiapapapapapbibiapapalbjapapapaqbkbkbkbkbkbkbkaqapapblbhbhbhbhafabadacabaa
-aaabadababababababafapapapapapapapapapapapapapbmaqaqaqaqaqbnboasbpbqasbraqapapblbhbsbtbhafafafafabaa
-aaabababababadababafatapapbuapapapapapapapapapbmbvbvbvbvaqbwbxbnasasboawaqbyapblbhbtbtbhafbzbzafabaa
+aaabadababababababafapapapapapapapapapapapapapbmaqaqaqaqaqbnboasbpbqasbraqapapblbhbscqbhafafafafabaa
+aaabababababadababafatapapbuapapapapapapapapapbmbvbvbvbvaqbwbxbnbycrboawaqapapcNbhbtbtbhafbzbzafabaa
 aaabababababababaeafajajajafapapapapapapapapapbmaqaqaqaqaqbAbAbAbAbAbAbAaqapapaibhbBbtbhavbCbhafabaa
 aaabababababacababbDbEbFbGafapbHbHbHbHbHbHapbIalbjapapapaqaqaqaqaqaqaqaqaqapbJafbhbhbhbhafbKbhafabaa
-aaababababababababbLbEbMbGaiapbHbHbHbHbHbHapbNafatapbbapapapapapapapaqbvaqapapalbhbhbhbOafbKbhafabaa
-aaababadabababababbLbYbYbYajapbHbHbHbHbHbHapbIafafafafafaiafafaVbQapaqbvaqapapbRbhbhbhbhbSbhbhafabaa
-aaabababababababbTbLbYbYciajapbHbHbHbHbHbHapapajbVbWbWbWbWbWafakakakbXbXbXakakakafafafafafaiafafabaa
-aaabaaaaaaaaaaaackbYbEbFbGajapbHbHbHbHbHbHapapbZbWbWbWbWbWbWafcaapapaqbvaqapapapafcbabababababacabaa
+aaababababababababbLbEbMbGaiapbHbHbHbHbHbHapbNafatapapcXapapapapapapaqbvaqapapalbhbhbhbOafbKbhafabaa
+aaababadabababababbLbYbYbYajapbHbHbHbHbHbHapbIafafafafafaiafafaVbQapaqbvaqcXapbRbhbhbhbhbSbhbhafabaa
+aaabababababababaCbLbYbYciajapbHbHbHbHbHbHapapajbVbWbWbWbWbWafakakakbXbXbXakakakafafafafafaiafafabaa
+aaabaaebebebebaackbYbEbFbGajapbHbHbHbHbHbHapapbZbWbWbWbWbWbWafcaapapaqbvaqapapapafcbabababababacabaa
 aaabaacccdcececfbYbYbEbMbGafbQapapapapapapbQcgajbWbWbWbWbWbWajapapapaqbvaqapapapajabadababababababaa
-aaabaachaaaaaaaackbYbYbYcmafalafcjcjcjcjcjafalafbWbWbWbWbWbWajcgapapaqbvaqapapapajababacabadabababaa
-aaabaaceaaabadabbTbLbYbYbYcncncmcscscscscscmcnctbWbWbWbWbWbWajaOapapaqbvaqapapaTajababababababababaa
-aaabaaceaaaaabababbDbYbYbYbMbMbYbYbYbYbYbYbYbMcxbWbWbWbWbWbWajapapcoaqcpaqcqapapajababadabacabadabaa
-aaabcrcececeaaababbLcnbYbYcycybYbYbYbYbYbYbYcycCbWbWbWbWbWbWafcuapcvawcwaDcvapcuafacabababababababaa
+aaabaachaaaaaaaackbYbYbYcmakakakcjcjcjcjcjakakakbWbWbWbWbWbWajcgapapaqbvaqapapapajababacabadabababaa
+aaabaaceaaabadabaCbLbYbYbYcncncmcscscscscscmcnctbWbWbWbWbWbWajaOapapaqbvaqapapaTajababababababababaa
+aaabaaceaaaaabababbDbYbYbYbMbMbYbYbYbYbYbYbYbMcxbWbWbWbWbWbWajapapecaqcpaqedapapajababadabacabadabaa
+aaabeecececeaaababbLcnbYbYcycybYbYbYbYbYbYbYcycCbWbWbWbWbWbWafcuapcvawcwaDcvapcuafacabababababababaa
 aaaaaaaaaacdaaadabcDbMbGbYbYbYbYbYbYbYbYbYbYbYcEababafafajafafalapapaqbvaqapapalafafajafafaaaaaaaaaa
-aaczcAcBaachaaababcFcGcHcIdWdXbYbYbYbYdXdWcIcHdYababafcJcKatbbapapapaqbvaqapapbbatapapcLafababababaa
-aacMcMaaaaceaaaaabcNcNcNcNcNaacfaaaacfaacNcNcNcNababajcOapapapapapapaqbvaqapapapapapapapafcPadabcQaa
+aaczcAcBaachaaababcFcGcHcIdWbTbYefefbYbTdWcIcHdYababafcJcKatapapapapaqbvaqapapapatapapcLafababababaa
+aacMcMaaaaceaaaaababababababaacfaaaacfaaababababababajcOapapapapapcXaqbvaqcXapapapapapapafcPadabcQaa
 aacRcMcfcecececeaaaaaaaaaaaaaaceaaaaceaaabababababacafaZapcScvapapafajcTajafapcUcUapapaTajababababaa
-aacVcMaaaacecrcececfcMcMcMcAcrcdaaaacdaaaaaaaaaaaaaaafapapcWcWapaTafcXbPbUafapcvcSapapaVajabcQabcPaa
-aacYcMcZaacecMaaaaaadadbdccYaacRcMcMcMcdcecececeddaaafcOapapapapdeafbPbPbPafapapapapapdeafababababaa
-aacAcMdfaacdaaaaaacraaaaaaaaaacMdgdgcMaaaaceaaaacMaaafdhdiapaVdicSafbPbPbPafapapapapdidhafacabadabaa
-aacRcMcAaacecedjcececececececddgdkdldgcecrdmaadndoaaafafafajajafafaidpdpdpafafafajajafafafababababaa
+aacMcMaaaaceeecececfcMcMcMcAeecdaaaacdaaebebebebaaaaafapapcWcWapaTafegbPehafapcvecapapaVajabcQabcPaa
+aacYcMcZaacecMaaaaaadadbdccYaacVdoeidocdcecececeddaaafcOapapapapdeafbPbPbPafapapapapapdeafababababaa
+aacAcMdfaacdebebebeeebebebebaacMdgdgcMaaaaceaaaacMaaafdhdiapaVdiecafbPbPbPafapapapapdidhafacabadabaa
+aadIcMcAaacecedjcececececececddgdkdldgejeedmaadndOaaakakakajajakakaidpdpdpakakakajajakakakababababaa
 aadqcMcZaachaaaaaaaaaaaaaaceaacMdgdgddaaaaaaaaaaaaaaaaaaabadababdrdsdtcldudsdrabcQdvabababcPabdrabaa
-aacVcMaaaaceaacAcMcMaadwaachaacMcMcMcMcdcecedjcecececeaacQacbTdxcBdycececedzdAdBababadabababdxdvdBaa
-aacPcMcrceceaaddaadCaadDceceaacdaaaaaaaaaaaaaaaaaaceceaacedEdEdFdEdEcececedEdEdEdEdEdGabaccQabdHabaa
-aacRcMaaceaacBcMaadpaaaaaaaaaaceaaababababaaaaaaaaaaceaadEcececececececececececececedEababababcPabaa
-aadIcMaaceaadJdKaadpaaadababaaceaaabadabaacccecedLcrceaadEcedEdEdEdEcececedEdEdEdEcedEabcBabababacaa
-aacBdKaadMaaaaaaaadNaacraaaadOcedPaaaaaaaacdaaaaaaaadMaadQcedEcececececececececedEcedEdrabababababaa
-aaaaaaaacecdcecececececedjcececececedjcecececececececeaadRcedEcececececececececedEcedEdvdBababcYabaa
+aacMcMaaaaceaacAcMdoaadwaachaadPekdPdPcdcecedjcecececeaacQacaCdxcBdycececedzdAdBababadabababdxdvdBaa
+aacPcMeececeaaddaaceaadDceceaacdaaaaaaaaaaaaaaaaaaceceaaejdEdEdFdEdEcececedEdEdEdEdEdGabaccQabdHabaa
+aacRcMaaceaacBcMaaceaaaaaaaaaaceaaababababaaaaaaaaaaceaadEcedRdRdRdRcececedRdRdRdRcedEababababcPabaa
+aadUcMaaceaadJdKaaceaaadababaaceaaabadabaacccecedLeeceaadEcedEdEdEdEcececedEdEdEdEcedEabcBabababacaa
+aacBdKaadMaaebebebcdaaeeaaaadVcedXebebebebcdebebebebdMaadQcedEejcececeeacececeejdEcedEdrabababababaa
+aaaaaaaacecdcecececececedjcececececedjcecececececececeaadZcedEcececececececececedEcedEdvdBababcYabaa
 aadJcececeaaaaaaaaaaaaaaaaaacecedSaaaaaaaacfaacececececfdEcedEdEdEdEcececedEdEdEdEcedEdHabababababaa
-aaaaaaaacecrcYcAcZcPdcdqdTaaceaaaaaaaaaacrceaaaacdcdcraadRcececececececececececececedEababcPabacabaa
-aaczdoaacfaadUcMcMcMcMcMcMcedMaaczcMcdcecedMaacPcMcMcAaachdEdEdFdEdEcececedEdEdEdEdFceababababcQabaa
-aadacMcMcMaacBcAcMcBcMcAcBaaaaaadVcAaaaaaaaaaadJcAcZcBaaaddxdwdBababcBabcQabadabacabcQabcYababababaa
-aaaaaaaaaaaaaaaaaaaacraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaceeecYcAcZcPdcdqdTaaceaaaaaaaaaaeeceaaaacdcdeeaadZcececececececececececececedEababcPabacabaa
+aaczdOaacfaadIcMcMcMcMcMcMcedMaaczcMcdcecedMaacPcMcMcAaachdEdEdFdEdEcececedEdEdEdEdFejababababcQabaa
+aadacMcMcMaacBcAelcBcMcAcBaaaaaadIcAaaaaaaaaaadJcAcZcBaaaddxdwdBababcBabcQabadabacabcQabcYababababaa
+aaaaaaaaaaaaaaaaaaaaeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 "}
