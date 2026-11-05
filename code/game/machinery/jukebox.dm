@@ -23,9 +23,14 @@
 	queue_icon_update()
 
 
-/obj/machinery/jukebox/Destroy()
-	QDEL_NULL(jukebox)
-	. = ..()
+/datum/jukebox/Destroy()
+	playing = FALSE
+	announcement_generation++
+	players_in_range.Cut()
+	QDEL_NULL_LIST(tracks)
+	QDEL_NULL(token)
+	owner = null
+	return ..()
 
 
 /obj/machinery/jukebox/on_update_icon()

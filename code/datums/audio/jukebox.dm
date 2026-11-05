@@ -15,6 +15,10 @@
 	var/ui_width
 	var/ui_height
 	var/playing
+	var/announcement_interval = 45 SECONDS
+	var/announcement_generation = 0
+	var/list/players_in_range = list()
+
 
 
 /datum/jukebox/New(atom/_owner, _template, _ui_title, _ui_width, _ui_height)
@@ -54,7 +58,7 @@
 	if (++index > length(tracks))
 		index = 1
 	if (playing)
-		Stop()
+		Stop(TRUE)
 		Play()
 
 
@@ -62,7 +66,7 @@
 	if (--index < 1)
 		index = length(tracks)
 	if (playing)
-		Stop()
+		Stop(TRUE)
 		Play()
 
 
@@ -72,12 +76,117 @@
 		return
 	index = clamp(_index, 1, length(tracks))
 	if (playing)
-		Stop()
+		Stop(TRUE)
 		Play()
 
 
-/datum/jukebox/proc/Stop()
+/datum/jukebox/proc/GetVolumeDescription()
+	if (volume <= 0)
+		return "muted"
+	if (volume <= 10)
+		return "very quiet"
+	if (volume <= 20)
+		return "quiet"
+	if (volume <= 30)
+		return "moderate"
+	if (volume <= 40)
+		return "loud"
+	return "very loud"
+
+
+/datum/jukebox/proc/GetMusicMessage()
+	var/datum/jukebox_track/track = tracks[index]
+	if (!track)
+		return null
+
+	return "\The [owner] plays '[track.title]' ([GetVolumeDescription()])."
+
+
+/datum/jukebox/proc/GetCurrentListeners()
+	var/list/listeners = list()
+
+	if (QDELETED(owner))
+		return listeners
+
+	var/turf/source = get_turf(owner)
+	if (!source)
+		return listeners
+
+	for (var/mob/M in range(range, source))
+		if (M.client)
+			listeners += M
+
+	return listeners
+
+
+/datum/jukebox/proc/AnnounceMusic()
+	if (!playing || QDELETED(owner) || volume <= 0)
+		return
+
+	var/message = GetMusicMessage()
+	if (!message)
+		return
+
+	for (var/mob/M in GetCurrentListeners())
+		to_chat(M, message)
+
+
+/datum/jukebox/proc/AnnounceStop()
+	if (QDELETED(owner))
+		return
+
+	var/message = "\The [owner] stops playing music."
+
+	for (var/mob/M in GetCurrentListeners())
+		to_chat(M, message)
+
+
+/datum/jukebox/proc/CheckNewListeners()
+	if (!playing || QDELETED(owner))
+		return
+
+	var/list/current_listeners = GetCurrentListeners()
+
+	if (volume > 0)
+		var/message = GetMusicMessage()
+
+		if (message)
+			for (var/mob/M in current_listeners)
+				if (!(M in players_in_range))
+					to_chat(M, message)
+
+	players_in_range = current_listeners
+
+
+/datum/jukebox/proc/AnnouncementLoop(generation)
+	var/elapsed = 0
+
+	while (playing && !QDELETED(owner) && generation == announcement_generation)
+		sleep(1 SECOND)
+
+		if (!playing || QDELETED(owner) || generation != announcement_generation)
+			break
+
+		elapsed += 1 SECOND
+
+		// Announces to everyone at the 45-second mark.
+		if (elapsed >= announcement_interval)
+			players_in_range = GetCurrentListeners()
+			AnnounceMusic()
+			elapsed = 0
+		else
+			// Only announces to newly arrived players.
+			CheckNewListeners()
+
+
+
+/datum/jukebox/proc/Stop(silent = FALSE)
+	if (playing && !silent)
+		AnnounceStop()
+
 	playing = FALSE
+	announcement_generation++
+	players_in_range.Cut()
 	QDEL_NULL(token)
 	owner.queue_icon_update()
 
@@ -85,27 +194,54 @@
 /datum/jukebox/proc/Play()
 	if (playing)
 		return
+
 	var/datum/jukebox_track/track = tracks[index]
-	if (!track.source)
+	if (!track || !track.source)
 		return
+
 	playing = TRUE
-	token = GLOB.sound_player.PlayLoopingSound(owner, sound_id, track.source,
-		volume, range, falloff, frequency = frequency, prefer_mute = TRUE)
+	token = GLOB.sound_player.PlayLoopingSound(owner, sound_id, track.source, volume, range, falloff, frequency = frequency, prefer_mute = TRUE)
 	owner.queue_icon_update()
+
+	announcement_generation++
+
+	// Remembers everyone that is present before the new announcement.
+	players_in_range = GetCurrentListeners()
+
+	// Announces the start of the playback.
+	AnnounceMusic()
+
+	var/generation = announcement_generation
+	spawn(0)
+		AnnouncementLoop(generation)
 
 
 /datum/jukebox/proc/Volume(_volume)
 	_volume = text2num(_volume)
 	if (!isfinite(_volume))
 		return
+
+	var/old_volume = volume
+
 	if (_volume >= 0)
 		volume = min(_volume, volume_max)
 	else if (_volume == -1)
 		volume = max(volume - volume_step, 0)
 	else if (_volume == -2)
 		volume = min(volume + volume_step, volume_max)
+
 	if (token)
 		token.SetVolume(volume)
+
+	if (playing && volume != old_volume)
+		players_in_range = GetCurrentListeners()
+
+		if (volume > 0)
+			AnnounceMusic()
+		else
+			AnnounceStop()
+
+
 
 
 /datum/jukebox/proc/ModifyCurrentTrack()
@@ -122,7 +258,7 @@
 	track.source = track_file
 	log_and_message_admins("has modified a jukebox track belonging to [src.owner]. New title: '[track_name]' with file [track_file]")
 	if (playing)
-		Stop()
+		Stop(TRUE)
 		Play()
 
 
