@@ -15,7 +15,6 @@
 	var/ui_width
 	var/ui_height
 	var/playing
-	var/announcement_interval = 45 SECONDS
 	var/announcement_generation = 0
 	var/list/players_in_range = list()
 
@@ -82,16 +81,17 @@
 
 /datum/jukebox/proc/GetVolumeDescription()
 	if (volume <= 0)
-		return "muted"
+		return "silently"
 	if (volume <= 10)
-		return "very quiet"
+		return "almost inaudibly"
 	if (volume <= 20)
-		return "quiet"
+		return "softly"
 	if (volume <= 30)
-		return "moderate"
+		return "at a comfortable volume"
 	if (volume <= 40)
-		return "loud"
-	return "very loud"
+		return "loudly"
+	if (volume <= 50)
+		return "at ear-splitting volume"
 
 
 /datum/jukebox/proc/GetMusicMessage()
@@ -99,7 +99,7 @@
 	if (!track)
 		return null
 
-	return "\The [owner] plays '[track.title]' ([GetVolumeDescription()])."
+	return "<span style='color: #8266BA'><b>[track.title]</b></span> is playing <i>[GetVolumeDescription()]</i> from the [owner]."
 
 
 /datum/jukebox/proc/GetCurrentListeners()
@@ -159,24 +159,14 @@
 
 
 /datum/jukebox/proc/AnnouncementLoop(generation)
-	var/elapsed = 0
-
 	while (playing && !QDELETED(owner) && generation == announcement_generation)
 		sleep(1 SECOND)
 
 		if (!playing || QDELETED(owner) || generation != announcement_generation)
 			break
 
-		elapsed += 1 SECOND
-
-		// Announces to everyone at the 45-second mark.
-		if (elapsed >= announcement_interval)
-			players_in_range = GetCurrentListeners()
-			AnnounceMusic()
-			elapsed = 0
-		else
-			// Only announces to newly arrived players.
-			CheckNewListeners()
+		// Only announces to newly arrived players.
+		CheckNewListeners()
 
 
 
